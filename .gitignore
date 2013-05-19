@@ -201,7 +201,7 @@ sdist/
 develop-eggs/
 .installed.cfg
 
-static/
+/static/
 
 # Installer logs
 pip-log.txt

@@ -1,0 +1,233 @@
+{% load staticfiles %}
+<!DOCTYPE html> 
+
+	<html>
+		
+		<head> 
+
+		<!-- ////////////// DO NOT EDIT HEAD ///////////// -->
+
+        <!-- Title -->
+		
+			<title>Pineapple Project</title> 
+
+        <!-- Telling device not to scale (for when horizontal), 
+        users also cannot scale -->
+
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <!-- iPhone status bar styling -->
+			<meta name="apple-mobile-web-app-capable" content="yes" />
+			<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	
+		<!-- Image for when loading-->
+        	<link rel="apple-touch-startup-image" href="{% static "img/startup/startup.png" %}">
+
+        <!-- Icon for App Store-->
+			<link rel="apple-touch-icon" href="{% static "img/icon/apple-touch-icon.png" %}">
+
+		<!-- JQuery Mobile Stylesheets -->
+			<!-- Feel free to edit below :) -->
+			<link rel="stylesheet" href="{% static "css/styles.css" %}" />
+
+		<!-- JQuery JS -->
+			<script src="{% static "js/vendor/jquery.js" %}"></script>
+		<!-- Disabling vertical scroll -->
+			<script src="{% static "js/main.js" %}"></script>
+		<!-- JQuery Mobile JS -->
+			<script src="{% static "js/vendor/jquery.mobile-1.2.0.js" %}"></script>
+			 
+		</head>  
+
+		<body> 
+
+			<!-- ////////////// home ///////////// -->
+
+			<div id="index" data-role="page"  data-position="fixed" data-theme="a">
+
+                <div data-role="content">
+                        
+                    <div class="home-bg">
+                    </div>
+
+                        <a href="#factors" ><img class="home-logo" src="{% static "img/logo.svg" %}" alt="" /></a>
+                </div>
+
+			</div>
+
+			<!-- ////////////// end home ///////////// -->
+            
+            			<!-- ////////////////// factors ////////////////// -->
+
+            <div id="factors" data-role="page"  data-theme="a">
+
+                <div class="header" data-role="header" data-position="fixed">
+
+                    Crop Factors
+
+                </div>
+
+                <div data-role="content">
+
+                <div id="location" class="factors-location"> Toronto</div> 
+
+                   <form>
+
+                        <div data-role="rangeslider" data-mini="true">
+                            <label class="subhead" for="range-4a">Temperature Range (&#176;C)</label>
+                            <input type="range" name="range-4a" id="range-4a" min="-40" max="40" value="0">
+                            <input type="range" name="range-4b" id="range-4b" min="-40" max="40" value="100">
+                        </div>
+
+                        <br />
+
+                        <div data-role="rangeslider" data-mini="true">
+                            <label class="subhead" for="range-4a">Hours of Sunlight (hrs)</label>
+                            <input type="range" name="range-4a" id="range-4a" min="0" max="24" value="0">
+                            <input type="range" name="range-4b" id="range-4b" min="0" max="24" value="100">
+                        </div>
+
+                        <br />
+
+                        <div data-role="rangeslider" data-mini="true">
+                            <label class="subhead" for="range-4a">Annual Rainfall (mm)</label>
+                            <input type="range" name="range-4a" id="range-4a" min="0" max="300" value="0">
+                            <input type="range" name="range-4b" id="range-4b" min="0" max="300" value="100">
+                        </div>
+
+                        <br />
+                        
+                        <div class="subhead">Soil Type</div>
+
+                            <input type="checkbox" name="checkbox-h-6a" id="checkbox-h-6a">
+
+                            <label class="checkbox" for="checkbox-h-6a">
+
+                                <img class="float" src="{% static "img/mango.png" %}" alt="">
+
+                                <div class="float">
+                                    <h2>Clay</h2><p>Information about soil</p>
+                                </div>
+
+                            </label>
+
+                            <input type="checkbox" name="checkbox-h-6b" id="checkbox-h-6b">
+
+                            <label class="checkbox" for="checkbox-h-6b">
+
+                                <img class="float" src="{% static "img/mango.png" %}" alt="">
+
+                                <div class="float">
+                                    <h2>Sand</h2><p>Information on soil</p>
+                                </div>
+
+                            </label>
+
+                        <br />
+
+                        <a data-role="button" href="#recommendations">Recommend Crops</a>
+
+                    </form>
+
+
+
+                </div>
+
+            </div>
+
+			<!-- ////////////// END factors ///////////// -->
+            
+            <!-- ////////////////// recommendations ////////////////// -->
+
+            <div id="recommendations" data-role="page"  data-theme="a">
+
+                <div class="header" data-role="header" data-position="fixed">
+
+                    Recommended Crops
+
+                </div>
+
+                <div data-role="content">
+
+                <div id="location" class="factors-location"> Toronto</div> 
+
+                   <form>
+
+                            <input type="checkbox" name="checkbox-h-6a" id="checkbox-h-6a">
+
+                            <label class="checkbox" for="checkbox-h-6a">
+
+                                <img class="float" src="{% static "img/mango.png" %}" alt="">
+
+                                <div class="float">
+                                    <h2>Mango</h2><p>$5/packet</p>
+                                </div>
+
+                            </label>
+
+                            <input type="checkbox" name="checkbox-h-6b" id="checkbox-h-6b">
+
+                            <label class="checkbox" for="checkbox-h-6b">
+
+                                <img class="float" src="{% static "img/pineapple.png" %}" alt="">
+
+                                <div class="float">
+                                    <h2>Pineapple</h2><p>$3/packet</p>
+                                </div>
+
+                            </label>
+
+                            <input type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+
+                            <label class="checkbox" for="checkbox-h-6c">
+
+                                <img class="float" src="{% static "img/corn.png" %}" alt="">
+
+                                <div class="float">
+                                    <h2>Corn</h2><p>$3/packet</p>
+                                </div>
+
+                            </label>
+
+                            <input type="checkbox" name="checkbox-h-6d" id="checkbox-h-6d">
+
+                            <label class="checkbox" for="checkbox-h-6d">
+
+                                <img class="float" src="{% static "img/tamarind.png" %}" alt="">
+
+                                <div class="float">
+                                    <h2>Tamarind</h2><p>$3/packet</p>
+                                </div>
+
+                            </label>
+
+                            <input type="checkbox" name="checkbox-h-6e" id="checkbox-h-6e">
+
+                            <label class="checkbox" for="checkbox-h-6e">
+
+                                <img class="float" src="{% static "img/papaya.png" %}" alt="">
+
+                                <div class="float">
+                                    <h2>Papaya</h2><p>$3/packet</p>
+                                </div>
+
+                            </label>
+
+                        <br />
+
+                        <input type="submit" value="Buy with PayPal">
+
+                    </form>
+
+
+
+                </div>
+
+            </div>
+
+            <!-- ////////////// END recommendations ///////////// -->
+
+
+
+	</body>
+	</html>

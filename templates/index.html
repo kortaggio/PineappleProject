@@ -1,9 +1,71 @@
+{% load staticfiles %}
 <!DOCTYPE html>
-<html>
-<head>
-<title>Pineapple Project</title>
-</head>
-<body>
-Foo
-</body>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+
+        <link href='{% static "img/favicon.png" %}' rel='icon' type='image/x-icon'/>
+
+        <link rel="stylesheet" href="{% static "css/normalize.css" %}">
+        <link rel="stylesheet" href="{% static "css/main.css" %}">
+        <script src="{% static "js/vendor/modernizr-2.6.2.min.js" %}"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="main-container">
+            <div id="logo">
+                <img src="{% static "img/slice.png" %}" alt="The Pineapple Project" id="logo-left">
+                <img src="{% static "img/text.png" %}" alt="The Pineapple Project" id="logo-right">
+            </div>
+            <h1 class="headline">Which crops should I plant?</h1>
+            <a href="#" class="btn" id="tell-me">Tell Me!</a>
+        </div>
+
+        <div class="tab-row">
+            <ul><!-- Whitespace is commented out to fix spacing issue -->
+                <li id="tab0" class="current">About</li><!-- 
+             --><li id="tab1">Team</li><!-- 
+             --><li id="tab2">Partners</li><!-- 
+             --><li id="tab3">Contact</li>
+            </ul>
+        </div>
+
+        <div class="photo-container" id="photo0">
+            &nbsp;
+            <div class="photo-overlay">
+                <h2>About</h2>
+                <p>The Pineapple project was inspired by recent travels with EWB-JSC &amp; OI to Mesoamerica and Africa: farmers shared stories of frustration with the lack of resources available for existing or potential farmers  to make informed planting decisions. They explained that due to the scarcity of information available, often a less than optimum species or variety of a crop is planted, exhausting limited land and resources needed to augment dietary needs and supplement revenues such as the orphanage this pineapple grove supports.</p>
+                <p>After requesting and researching resources, we learned that leading food security experts have also identified an lack of quality and actionable information for existing and potential farmers.</p>
+                <p>Thus, we developed the Pineapple Project</p>
+            </div>
+            &nbsp;
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="{% static "js/plugins.js" %}"></script>
+        <script src="{% static "js/main.js" %}"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+        <!-- Farm picture from http://4.bp.blogspot.com/-IEQcBSasYpE/TXZUQ9tEzrI/AAAAAAAAAPs/s6SXPVYlbs8/s1600/Leon%2Bto%2BOmetepe%252C%2BNicaragua%2B242.JPG -->
+    </body>
 </html>
